@@ -1,0 +1,142 @@
+:root {
+  --color-yellow: hsl(47, 88%, 63%);
+  --color-gray-500: hsl(0, 0%, 43%);
+  --color-gray-950: hsl(0, 0, 7%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('assets/fonts/Figtree-VariableFont_wght.ttf'), url('assets/fonts/Figtree-Italic-VariableFont_wght.ttf');
+  font-display: swap;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    margin-inline: 1.562em;
+    overflow-x: hidden;
+  }
+}
+
+body {
+  background-color: var(--color-yellow);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--color-white);
+  
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+
+  padding: 1.5em;
+  line-height: 150%;
+  width: 23em;
+
+  border-radius: 1.25em;
+  box-shadow: 10px 10px black;
+  border: 1px solid black;
+}
+
+.card img {
+  border-radius: 0.725em;
+  width: fit-content;
+}
+
+.card h1 {
+  font-size: 1.25em;
+  font-weight: 800;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.card h1:hover {
+  color: var(--color-yellow);
+  cursor: pointer;
+}
+
+.card p {
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--color-gray-500);
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  width: fit-content;
+}
+
+.badge {
+  background-color: var(--color-yellow);
+
+  width: min-content;
+  height: min-content;
+
+  border-radius: 0.25em;
+  padding-inline: 0.75em;
+  padding-block: 0.25em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge span {
+  font-size: 0.75em;
+  font-weight: 800;
+}
+
+.caption {
+  font-size: 0.75em;
+  font-weight: 500;
+}
+
+.creator {
+  width: fit-content;
+  height: min-content;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75em;
+}
+
+.creator img {
+  width: 2em;
+  height: 2em;
+}
+
+.creator span {
+  font-size: 0.875em;
+  font-weight: 800;
+}
